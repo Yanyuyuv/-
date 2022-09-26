@@ -1,0 +1,34 @@
+<!--pages/index/index.wxml style="display:{{appearFlag?'block':'none'}}"-->
+
+  
+<view class="search-container" >
+    <!--pages/SearchResult/SearchResult.wxml -->
+    <view class="iconfont icon-cha" bindtap=""></view>
+    <view class="logo-container">
+        <image src="/static/images/logo.png" mode="widthFix"></image>
+    </view>
+    <view class="clearfix"></view>
+      
+    <view class="search-title">
+        报名查询
+    </view>
+
+    <view class="studentInfo">
+        <view class="student-name">
+            <text>姓名:</text><input type="text" placeholder="请输入姓名">123</input>
+        </view>
+        <view class="student-number">
+            <text>学号:</text><input type="text" placeholder="请输入学号">456</input>
+        </view>
+    </view>
+    
+    <button class="confirm-search" bindtap="goSearch">查询</button>
+</view>
+
+<view class="btns">
+    <button  bindtap="appearSearch">结果查询</button>
+    <button bindtap="goApplicationForm">立即报名</button>
+</view>
+  
+
+

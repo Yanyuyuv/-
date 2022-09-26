@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/SearchResult/SearchResult",
+    "pages/index/index",
+    
+    
+    
+    
+    "pages/ApplicationForm/ApplicationForm"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#567ebc",
+    "navigationBarTitleText": "维生数工作室",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -4,7 +4,7 @@
     <view class="blueline"></view>
     <view class="blueline"></view>
   -->
-  <view class="bgIMG-container">
+<view class="bgIMG-container">
     <image class="" src="/static/images/背景.png" mode="widthFix"></image>
 </view>
 

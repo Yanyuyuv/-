@@ -90,3 +90,7 @@ button {
 .btns{
   display: flex;
 }
+
+.submit{
+  
+}

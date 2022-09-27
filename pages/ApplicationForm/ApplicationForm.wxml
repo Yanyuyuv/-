@@ -1,2 +1,51 @@
-<!--pages/ApplicationForm/ApplicationForm.wxml-->
-<text>pages/ApplicationForm/ApplicationForm.wxml</text>
+<!--pages/ApplicationForm/ApplicationForm.wxml -->
+<view class="bgIMG-container">
+    <image class="" src="/static/images/背景.png" mode="widthFix"></image>
+</view>
+
+<view class="form-container">
+    <view class="logo-container">
+        <image src="/static/images/logo.png" mode="widthFix"></image>
+    </view>
+    <!--消除浮动-->
+    <view class="clearfix"></view>
+    <!--虚线文字-->
+    <view class="note">
+        /*请填写报名信息*/
+    </view>
+
+    <!--五个表单的包裹器-->
+    <view class="input-container">
+        <view class="input-item">
+            <text>年级:</text>
+            <input type="text" placeholder="22级" required></input>
+        </view>
+        <view class="input-item">
+            <text>专业:</text>
+            <input type="text"  required></input>
+        </view>
+        <view class="input-item">
+            <text>姓名:</text>
+            <input type="text"  required></input>
+        </view>
+        <view class="input-item">
+            <text>学号:</text>
+            <input type="number"  required></input>
+        </view>
+        <view class="input-item">
+            <text>手机:</text>
+            <input type="text" required></input>
+        </view>
+        <view class="self-comment">
+            <view>自我评价:</view>
+            <input type="" required></input>
+        </view>
+        <button type="submit" class="submitbtn">
+            立即提交
+        </button>
+    </view>
+      
+</view>
+
+
+  

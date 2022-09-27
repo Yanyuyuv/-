@@ -40,11 +40,12 @@
             <view>自我评价:</view>
             <input type="" required></input>
         </view>
-        <button type="submit" class="submitbtn">
-            立即提交
-        </button>
+        
     </view>
-      
+
+    <button type="submit" class="submitbtn">
+        立即提交
+    </button>
 </view>
 
 

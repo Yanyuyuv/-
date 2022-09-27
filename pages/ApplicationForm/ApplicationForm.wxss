@@ -9,7 +9,7 @@ page {
     z-index: -999;
     height: 100%;
     width: 100%;
-    background-color: aqua;
+    
 }
 
 .bgIMG-container image {
@@ -17,34 +17,24 @@ page {
     max-height: 100%;
 }
 
-/* 表单的整个包裹器 */
 .form-container {
-    /* display: none; */
     position: relative;
-    top: 6%;
+    top: 10%;
+    width: 600rpx;
     left: 10%;
-    height: 900rpx;
-    width: 80%;
-    background-color: rgba(255, 255, 255, .5);
-    z-index: 999;
-    transition: 1s all ease 0s;
-    border-radius: 10rpx;
-    /* border: 1px solid red; */
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 15rpx;
+    padding-bottom: 30rpx;
 }
 
-/* logo包裹器 */
 .logo-container {
-    float: left;
-    width: 390rpx;
-    padding: 20rpx;
+
+    width: 400rpx;
+    padding: 20rpx 0 0 20rpx;
 }
 
 .logo-container image {
     width: 100%;
-}
-
-.clearfix {
-    clear: both;
 }
 
 .note {
@@ -53,13 +43,12 @@ page {
     color: #808080;
 
     padding-left: 5%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
     box-shadow: 0rpx 1rpx #808080
 }
 
 .input-container {
     width: 540rpx;
-    height: 350rpx;
     /* background-color: beige; */
     margin: 0 auto 0 auto;
 }
@@ -70,6 +59,7 @@ page {
     margin-bottom: 12rpx;
     display: flex;
     white-space: nowrap;
+
 }
 
 .input-container .input-item text {
@@ -86,24 +76,23 @@ page {
     padding-left: 20rpx;
 }
 
-.input-container .self-comment{
-    height: 80rpx;
-    line-height: 100rpx;
+.self-comment{
+    margin-bottom: 30rpx;
+    
 }
 
-.input-container .self-comment view{
-    height: 60rpx;
-    line-height: 60rpx;
+.self-comment view{
     font-size: 28rpx;
+    margin: 20rpx 20rpx 0 0rpx;
 }
 
-.input-container .self-comment input{
-    margin-top: 0rpx;
-    height: 120rpx;
-    white-space: wrap;
+.self-comment input{
+    height: 200rpx;
 }
 
 .submitbtn{
+   
     
-    
+    background-color: #567ebc;
+    color: #fff;
 }

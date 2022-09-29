@@ -19,9 +19,10 @@ page {
 
 .form-container {
     position: relative;
-    top: 10%;
-    width: 600rpx;
+    top:10%;
     left: 10%;
+    width: 600rpx;
+    
     background-color: rgba(255, 255, 255, .6);
     border-radius: 15rpx;
     padding-bottom: 30rpx;
@@ -83,11 +84,15 @@ page {
 
 .self-comment view{
     font-size: 28rpx;
-    margin: 20rpx 20rpx 0 0rpx;
+    margin: 20rpx 20rpx 10rpx 0rpx;
 }
 
-.self-comment input{
-    height: 200rpx;
+.self-comment textarea{
+    border: 1rpx solid #b3b3b3;
+    padding: 10rpx 10rpx;
+    width: 98%;
+    height: 150rpx;
+    border-radius: 10rpx
 }
 
 .submitbtn{

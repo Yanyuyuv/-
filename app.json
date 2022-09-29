@@ -1,8 +1,15 @@
 {
   "pages": [
+    "pages/SearchResult/SearchResult",
     "pages/ApplicationForm/ApplicationForm",
-   "pages/index/index",
-    "pages/SearchResult/SearchResult"
+    
+    
+    
+    "pages/index/index"
+    
+   
+    
+    
     
     
     

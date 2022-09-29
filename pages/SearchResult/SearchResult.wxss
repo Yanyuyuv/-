@@ -1,5 +1,5 @@
 /* pages/SearchResult/SearchResult.wxss */
-page{
+page {
     position: relative;
 }
 
@@ -9,16 +9,15 @@ page{
     z-index: -999;
     height: 100%;
     width: 100%;
-    background-color: aqua;
 }
 
-.bgIMG-container image{
-   width: 100%;
+.bgIMG-container image {
+    width: 100%;
     max-height: 100%;
 }
 
 /* 流程图的样式 */
-.process-container{
+.process-container {
     position: absolute;
     top: 5%;
     height: 90%;
@@ -28,54 +27,57 @@ page{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
     /* background-color: rgba(255, 255, 255, .5) */
 }
 
 .each-container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+   
 }
 
-.each-container text{
+.each-container text {
     width: 30%;
     text-align: center;
     font-size: 30rpx;
     color: #222;
 }
 
-.each-container .iconfont{
-    color: #ccc;
+.each-container .left{
+    text-align: right;
 }
 
-.lines{
-    position: relative;
-    width: 100%;
-    height: 100%;
+.each-container .right{
+    text-align: left;
 }
 
-.lines .each-line{
+.center-line{
+    overflow: hidden;
     position: absolute;
-    left: 49.3334%;
-    width: 1.3333%;
-    height: 16%;
-    background-color:  rgba(204, 204, 204.6);
+    height: 75.5%;
+    top: 12.5%;
+    width: 2.5%;
+    left: 48.75%;
+    background-color: #567ebc;
+    border-radius: 20rpx 20rpx;
+    z-index: 99;
+}
+
+.block-line{
     
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ddd;
+    z-index: 100;
 }
 
-.lines .each-line:nth-child(1){
-    top:15%;
-}
-
-.lines .each-line:nth-child(2){
-    top:33%
-}
-
-.lines .each-line:nth-child(3){
-    top:51%
-}
-
-.lines .each-line:nth-child(4){
-    top:69%
+.block-line{
+    transition: 1.5s transform ease;
+    
 }

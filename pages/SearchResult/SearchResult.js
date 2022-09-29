@@ -5,14 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    //0未报名，1报名成功，2面试成功，3.....
+    status:0,
+    lineActive:-1,
+    moveY:'translateY(0)'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    setTimeout(()=>{ this.statusAnimation(this.data.status);},1000)
+   
+    
   },
 
   /**
@@ -62,5 +67,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 加载动画
+  statusAnimation(status){
+    if (status==0) {
+      return
+    }
+    let movePercent=-15-(status-1)*25;
+    this.setData({
+      lineActive:1,
+      moveY:'translateY'+`(${movePercent}%)`
+    })
+    console.log(this.data.moveY);
   }
 })

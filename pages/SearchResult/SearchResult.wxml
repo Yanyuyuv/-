@@ -1,47 +1,49 @@
-<!--pages/SearchResult/SearchResult.wxml 
-<view class="blueline"></view>
-    <view class="blueline"></view>
-    <view class="blueline"></view>
-    <view class="blueline"></view>
-  -->
+<!--pages/SearchResult/SearchResult.wxml
+<view class="block-line" style="transform:{{lineActive>0?moveY:'transform: translateY(0);'}}">
+        
+    </view>
+-->
 <view class="bgIMG-container">
-    <image class="" src="/static/images/背景.png" mode="widthFix"></image>
+    <image class="" src="/static/images/background.png" mode="widthFix"></image>
 </view>
 
 <view class="process-container">
     <view class="each-container">
         <text class="left">考核结果</text>
-        <text class="iconfont icon-weixuanzhongyuanquan"></text>
+        
         <text class="right">审核中</text>
     </view>
     <view class="each-container">
         <text class="left">二轮考核</text>
-        <text class="iconfont icon-weixuanzhongyuanquan"></text>
+        
         <text class="right">审核中</text>
     </view>
     <view class="each-container">
         <text class="left">一轮考核</text>
-        <text class="iconfont icon-weixuanzhongyuanquan"></text>
+        
         <text class="right">审核中</text>
     </view>
     <view class="each-container">
         <text class="left">面试</text>
-        <text class="iconfont icon-weixuanzhongyuanquan"></text>
+        
         <text class="right">审核中</text>
     </view>
     <view class="each-container">
         <text class="left">报名</text>
-        <text class="iconfont icon-weixuanzhongyuanquan"></text>
+    
         <text class="right">审核中</text>
     </view>
-</view>
-<view class="lines">
-    <view class="each-line"></view>
-    <view class="each-line"></view>
-    <view class="each-line"></view>
-    <view class="each-line"></view>
     
 </view>
+<view class="center-line" >
+    <view class="block-line" style="transform:{{lineActive>0?moveY:'transform: translateY(0);'}}">
+        
+    </view>
+</view>
+
+
+  
+
   
 
 

@@ -1,0 +1,18 @@
+<!-- 介绍组件 -->
+<view class="Inctroduce-container">
+  <!-- 上方名称 -->
+  <view class="top-name-container">
+    <view class="top-name">
+      <slot name="top-name"></slot>
+    </view>
+  </view>
+  <!-- 下方介绍框框 -->
+  <view class="middle-infomation-container-wrap">
+    <view class="middle-infomation-container">
+      <view class="middle-infomation">
+        <slot name="middle-infomation"></slot>
+      </view>
+
+    </view>
+  </view>
+</view>

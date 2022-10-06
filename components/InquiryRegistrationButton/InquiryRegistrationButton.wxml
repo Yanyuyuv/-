@@ -1,0 +1,9 @@
+<!-- 查询和报名按钮组件 -->
+<view class="InquiryRegistrationButton-container">
+  <view class="btn-container">
+    <button class="inq-btn" bindtap="goSearch">结果查询</button>
+
+    <button class="reg-btn" bindtap="goApplicationForm">立即报名</button>
+  </view>
+
+</view>

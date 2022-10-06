@@ -1,83 +1,91 @@
 /* pages/SearchResult/SearchResult.wxss */
 page {
-    position: relative;
+  position: relative;
 }
 
-/* 背景的样式 */
-.bgIMG-container {
-    position: absolute;
-    z-index: -999;
-    height: 100%;
-    width: 100%;
+.SearchResult-container {
+  width: 100%;
+  height: 100vh;
+  user-select: none;
+  /*禁止选中*/
+  position: relative;
+  /*方便后续的绝对定位*/
+  display: flex;
+  /*用flex来让轮播图部分铺满*/
+  flex-direction: column;
 }
 
-.bgIMG-container image {
-    width: 100%;
-    max-height: 100%;
+.wrapper {
+  /*让轮播图部分铺满下面的部分*/
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 流程图的样式 */
 .process-container {
-    position: absolute;
-    top: 5%;
-    height: 90%;
-    width: 60%;
-    left: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  position: absolute;
+  top: 10%;
+  height: 90%;
+  width: 60%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-    /* background-color: rgba(255, 255, 255, .5) */
+  /* background-color: rgba(255, 255, 255, .5) */
 }
 
 .each-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-   
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .each-container text {
-    width: 30%;
-    text-align: center;
-    font-size: 30rpx;
-    color: #222;
+  width: 30%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #222;
 }
 
-.each-container .left{
-    text-align: right;
+.each-container .left {
+  text-align: right;
 }
 
-.each-container .right{
-    text-align: left;
+.each-container .right {
+  text-align: left;
 }
 
-.center-line{
-    overflow: hidden;
-    position: absolute;
-    height: 75.5%;
-    top: 12.5%;
-    width: 2.5%;
-    left: 48.75%;
-    background-color: #567ebc;
-    border-radius: 20rpx 20rpx;
-    z-index: 99;
+.center-line {
+  overflow: hidden;
+  position: absolute;
+  height: 75.5%;
+  top: 18.5%;
+  width: 2.5%;
+  left: 48.75%;
+  background-color: #567ebc;
+  border-radius: 20rpx 20rpx;
+  z-index: 99;
 }
 
-.block-line{
-    
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #ddd;
-    z-index: 100;
+.block-line {
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ddd;
+  z-index: 100;
 }
 
-.block-line{
-    transition: 1.5s transform ease;
-    
+.block-line {
+  transition: 1.5s transform ease;
+
 }

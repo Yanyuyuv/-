@@ -1,32 +1,19 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/SearchResult/SearchResult",
-    "pages/ApplicationForm/ApplicationForm"
+    "pages/SearchResult/SearchResult"
     
-    
-    
-    
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#567ebc",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#567EBC",
     "navigationBarTitleText": "维生数工作室",
     "navigationBarTextStyle": "white"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }

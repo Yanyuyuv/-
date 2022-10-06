@@ -1,0 +1,106 @@
+/* 主页1 */
+.Home1-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 30rpx;
+  left: 40rpx;
+  width: 350rpx;
+  height: 90rpx;
+}
+
+.VTMER {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -24vh;
+  /* 高度的一半再上去一点 */
+
+  margin-left: -8.6vh;
+  /* 宽度的一半*/
+
+  width: 14vh;
+  height: 46vh;
+  /* 缓缓缩放动态 */
+  animation: h1dynamic-z 10s ease-in-out infinite alternate;
+}
+
+.middleName {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -7vh;
+  /* 高度的一半再上去一点 */
+
+  margin-left: -12vh;
+  /* 宽度的一半*/
+
+  width: 24vh;
+  height: 8vh;
+  /* 缓缓平面移动动态 */
+  animation: h1dynamic-xy 10s ease-in-out infinite alternate;
+}
+
+.welcome {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 2.6vh;
+  /* 高度的一半再上去一点 */
+
+  margin-left: -12vh;
+  /* 宽度的一半*/
+
+
+  width: 24vh;
+  height: 2.6vh;
+  /* 缓缓平面移动动态 */
+  animation: h1dynamic-xy 10s ease-in-out infinite alternate;
+}
+
+/* h1缓入动画 */
+@keyframes h1ease-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* h1图片平面动态动画 */
+@keyframes h1dynamic-xy {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-1.8px, -1.8px);
+
+  }
+
+  100% {
+    transform: translate(1.8px, 1.8px);
+  }
+}
+
+/* h1图片缩放动态动画 */
+@keyframes h1dynamic-z {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.02, 1.02);
+
+  }
+
+  100% {
+    transform: scale(0.98, 0.98);
+  }
+}

@@ -1,0 +1,26 @@
+<!-- 查询弹框下方挡板 -->
+<view class="Search-bottom"></view>
+<view class="Search-container" style="opacity: {{easeShow}};">
+  <view class="search-container">
+    <view class="iconfont icon-cha" bindtap="searchClose">×</view>
+    <view class="logo-container">
+      <image src="/static/images/logo.png" mode="widthFix"></image>
+    </view>
+    <view class="clearfix"></view>
+
+    <view class="search-title">
+      报名查询
+    </view>
+
+    <view class="studentInfo">
+      <view class="student-name">
+        <text>姓名:</text><input type="text" placeholder="请输入姓名" bindinput="handleInput" data-type="name"></input>
+      </view>
+      <view class="student-number">
+        <text>学号:</text><input type="text" placeholder="请输入学号" bindinput="handleInput" data-type="studentNumber"></input>
+      </view>
+    </view>
+
+    <button class="confirm-search" bindtap="goSearch">查 询</button>
+  </view>
+</view>

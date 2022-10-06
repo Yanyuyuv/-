@@ -1,0 +1,51 @@
+<view class="ApplicatonForm-container">
+  <view class="wrapper">
+    <view class="form-container">
+      <view class="logo-container">
+        <image src="../../static/images/logo.png" mode="widthFix"></image>
+      </view>
+      <!--消除浮动-->
+      <view class="clearfix"></view>
+      <!--虚线文字-->
+      <view class="note">
+        /*请填写报名信息*/
+      </view>
+
+      <!--五个表单的包裹器-->
+      <view class="input-container">
+        <view class="input-item">
+          <text>方向:</text>
+          <input type="text" bindinput="handleInput" data-type="direction" placeholder="前端/后台/UI/运营" placeholder-style="font-size:1rem;"></input>
+
+        </view>
+        <view class="input-item">
+          <text>专业:</text>
+          <input type="text" bindinput="handleInput" data-type="zhuanYe"></input>
+        </view>
+        <view class="input-item">
+          <text>姓名:</text>
+          <input type="text" bindinput="handleInput" data-type="name"></input>
+        </view>
+
+        <view class="input-item">
+          <text>学号:</text>
+          <input type="number" bindinput="handleInput" data-type="studentNumber"></input>
+        </view>
+        <view class="input-item">
+          <text>手机:</text>
+          <input type="text" bindinput="handleInput" data-type="phone"></input>
+        </view>
+        <view class="self-comment">
+          <view>自我评价:(最多输入70个字符哟~)</view>
+          <textarea maxlength="70" bindinput="handleInput" data-type="selfComment"></textarea>
+        </view>
+
+      </view>
+
+      <!--事件为前端验证-->
+      <button type="submit" class="submitbtn" bindtap="webVerify">
+        立即提交
+      </button>
+    </view>
+  </view>
+</view>

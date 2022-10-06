@@ -1,0 +1,4 @@
+<!--components/NavigationBar/NavigationBar.wxml-->
+<view class="NavigationBar-container" style="padding-top: {{paddingTopNum}}px;">
+ <view>维生数工作室</view>
+</view>

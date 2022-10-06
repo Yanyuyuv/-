@@ -1,3 +1,3 @@
 export default{
-    host:'http://localhost:3000'
+    host:'https://mock.apifox.cn/m1/1676818-0-default'
 }

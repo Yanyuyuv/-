@@ -1,96 +1,31 @@
-/* pages/index/index.wxss */
-button {
-  margin-top: 20rpx;
+page{
+  background: rgb(86,126,188);
 }
-
-.search-container {
-  /* display: none; */
-  
-  position: relative;
-  margin: 170rpx auto 0 auto;
-  height: 700rpx;
-  width: 600rpx;
-  background-color: rgba(255, 255, 255, .5);
-  z-index: 999;
-  transition: 1s all ease 0s;
-  border-radius: 10rpx;
-  border: 1px solid red;
-}
-
-.search-container .iconfont {
-  float: right;
-  margin: 20rpx 20rpx 0 0;
-  font-size: 50rpx;
-  color: #999;
-}
-
-.logo-container {
-  float: left;
-  width: 390rpx;
-  padding: 20rpx;
-}
-
-.logo-container image {
+.index-container{
   width: 100%;
-}
+  height:100vh;
+  user-select: none;/*禁止选中*/
+  position: relative;/*方便后续的绝对定位*/
+  display: flex;/*用flex来让轮播图部分铺满*/
+  flex-direction: column;
 
-.clearfix {
-  clear: both;
 }
+/* 轮播图(高度占据了90vh) */
+.swiper-container{
+  width: 100%;
+  flex:1;/*让轮播图部分铺满下面的部分*/
 
-.search-title {
-  margin: 0 auto;
-  width: 240rpx;
-  text-align: center;
-  font-size: 40rpx;
-  color: #567ebc;
-}
+  animation-name: ease-in;
+  animation-duration:2s;
+}  
 
-.studentInfo {
-  width: 540rpx;
-  height: 280rpx;
-  /* background-color: beige; */
-  margin: 50rpx auto 0 auto;
-}
+/* 缓入动画 */
+@keyframes ease-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 
-.studentInfo view {
-  height: 100rpx;
-  line-height: 100rpx;
-  margin-bottom: 40rpx;
-  display: flex;
-  white-space: nowrap;
-}
-
-.studentInfo view text {
-  font-size: 30rpx;
-  margin: 0 20rpx 0 30rpx;
-}
-
-.studentInfo input {
-  border: 1px solid #b3b3b3;
-  height: 60rpx;
-  margin-top: 20rpx;
-  border-radius: 45rpx;
-  font-size: 30rpx;
-  padding-left: 20rpx;
-}
-
-.confirm-search {
-  margin: 0rpx auto 0 auto;
-  width: 300rpx;
-  height: 76rpx;
-  line-height: 45rpx;
-  border-radius: 50rpx;
-  background: #567ebc;
-  color: #fff;
-  font-size: 32rpx;
-  
-}
-
-.btns{
-  display: flex;
-}
-
-.submit{
-  
 }

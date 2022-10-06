@@ -1,34 +1,37 @@
-<!--pages/index/index.wxml style="display:{{appearFlag?'block':'none'}}"-->
+<view class="index-container">
+  <!-- 背景 -->
+  <view class="background-container">
+    <!-- 自定义NavigationBar -->
+    <NavigationBar></NavigationBar>
+    <!-- 背景图片(fixed) -->
+    <BackgroundImage></BackgroundImage>
 
-  
-<view class="search-container" >
-    <!--pages/SearchResult/SearchResult.wxml -->
-    <view class="iconfont icon-cha" bindtap=""></view>
-    <view class="logo-container">
-        <image src="/static/images/logo.png" mode="widthFix"></image>
-    </view>
-    <view class="clearfix"></view>
-      
-    <view class="search-title">
-        报名查询
-    </view>
+  </view>
 
-    <view class="studentInfo">
-        <view class="student-name">
-            <text>姓名:</text><input type="text" placeholder="请输入姓名">123</input>
-        </view>
-        <view class="student-number">
-            <text>学号:</text><input type="text" placeholder="请输入学号">456</input>
-        </view>
-    </view>
-    
-    <button class="confirm-search" bindtap="goSearch">查询</button>
+  <!-- 查询弹框 -->
+  <view class="Search-container" wx:if="{{searchDisplay}}">
+    <Search bindSearchDisplay="searchDisplay"></Search>
+  </view>
+
+
+  <!-- 轮播图 -->
+  <swiper class="swiper-container" bindtouchstart='touchStart' bindtouchend="touchEnd" current="{{swiperCurrent}}" duration="800" style="padding-top: {{paddingTopNum}}px;" bindchange="bc">
+    <swiper-item catchtouchmove='catchTouchMove'>
+      <!-- 在主轮播图中嵌套主页1和主页2轮播图 -->
+      <Home1></Home1>
+      <!-- 查询报名按钮组件 -->
+      <InqRegBtn bindSearchDisplay="searchDisplay" bindh2Swiper="h2Swiper"></InqRegBtn>
+    </swiper-item>
+
+    <swiper-item catchtouchmove='catchTouchMove'>
+      <Home2 inxSwiperCurrent="{{swiperCurrent}}" bindh2Swiper="h2Swiper"></Home2>
+      <!-- 查询报名按钮组件 -->
+      <InqRegBtn bindSearchDisplay="searchDisplay" bindh2Swiper="h2Swiper"></InqRegBtn>
+    </swiper-item>
+
+    <swiper-item catchtouchmove='catchTouchMove'>
+      <ApplicationForm></ApplicationForm>
+    </swiper-item>
+  </swiper>
+
 </view>
-
-<view class="btns">
-    <button  bindtap="appearSearch">结果查询</button>
-    <button bindtap="goApplicationForm">立即报名</button>
-</view>
-  
-
-

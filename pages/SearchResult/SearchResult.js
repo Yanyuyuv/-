@@ -1,4 +1,5 @@
 // pages/SearchResult/SearchResult.js
+import request from '../../utils/request'
 Page({
 
   /**
@@ -15,7 +16,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    setTimeout(()=>{ this.statusAnimation(this.data.status);},1000)
+    setTimeout(()=>{ 
+      this.requestStatus()
+      
+      
+    },1000)
    
     
   },
@@ -80,5 +85,14 @@ Page({
       moveY:'translateY'+`(${movePercent}%)`
     })
     console.log(this.data.moveY);
+  },
+
+  // 向服务器发送请求的函数
+  async requestStatus(){
+    let result=await request('/getProgress/1')
+    this.setData({
+      status:result.progressStatus
+    })
+    this.statusAnimation(this.data.status);
   }
 })

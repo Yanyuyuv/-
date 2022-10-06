@@ -1,0 +1,104 @@
+.Search-bottom {
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  z-index: 1;
+}
+
+.Search-container {
+  transform: scale(1.1,1.1);/*微调大小*/
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -350rpx;
+  /* 高度的一半再上去一点 */
+  opacity: 0;
+  transition: all 0.3s;
+
+  margin-left: -300rpx;
+  /* 宽度的一半*/
+}
+
+.search-container {
+  /* display: none; */
+  position: relative;
+  height: 700rpx;
+  width: 600rpx;
+  background-color: rgba(228, 231, 235, 0.979);
+  transition: 1s all ease 0s;
+  border-radius: 10rpx;
+}
+
+.search-container .iconfont {
+  float: right;
+  margin: 10rpx 20rpx 0 0;
+  padding: 2rpx 4rpx;
+  font-size: 50rpx;
+  color: #999;
+}
+
+.logo-container {
+  float: left;
+  width: 390rpx;
+  padding: 20rpx;
+}
+
+.logo-container image {
+  width: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* 报名查询标题 */
+.search-title {
+  margin: 0 auto;
+  width: 240rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #567ebc;
+}
+
+.studentInfo {
+  width: 540rpx;
+  height: 280rpx;
+  /* background-color: beige; */
+  margin: 50rpx auto 0 auto;
+}
+
+.studentInfo view {
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  white-space: nowrap;
+}
+
+.studentInfo view text {
+  font-size: 30rpx;
+  margin: 0 20rpx 0 30rpx;
+}
+
+.studentInfo input {
+  border: 1px solid #b3b3b3;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border-radius: 45rpx;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+
+/* 查询按钮 */
+.confirm-search {
+  margin: auto auto;
+  width: 300rpx;
+  height: 76rpx;
+  border-radius: 50rpx;
+  background: #567ebc;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,105 @@
+.ApplicatonForm-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  /* position: relative;
+    top:10%;
+    left: 10%; */
+  width: 600rpx;
+  max-height: 80vh;
+  /*微调位置*/
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 20rpx;
+}
+
+.logo-container {
+  max-width: 350rpx;
+  padding: 20rpx 20rpx 20rpx 30rpx;
+}
+
+.logo-container image {
+  width: 100%;
+}
+
+.note {
+  font-size: 1.1rem;
+  color: #808080;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  box-shadow: 0rpx 1rpx #808080
+}
+
+.input-container {
+  width: 540rpx;
+  /* background-color: beige; */
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.input-container .input-item {
+  height: 60rpx;
+  margin: 1.5vh 0;/*每一行的间隔*/
+  white-space: nowrap;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+
+}
+
+.input-container .input-item text {
+  font-size: 1rem;
+  margin: 0 0.8rem 0 0;
+}
+
+.input-container input {
+  flex:1;
+  border: 1px solid #b3b3b3;
+  height: 1.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.self-comment{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.self-comment view {
+  font-size: 1rem;
+  margin: 20rpx 20rpx 10rpx 0rpx;
+  white-space: nowrap;
+}
+
+.self-comment textarea {
+  width: 95%;
+  border: 1rpx solid #b3b3b3;
+  padding: 10rpx 10rpx;
+  margin: 0 auto;
+  height: 10vh;
+  border-radius: 10rpx
+}
+
+.submitbtn {
+  margin:1.1rem auto;
+  width:9rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  background-color: #567ebc;
+  color: #fff;
+}

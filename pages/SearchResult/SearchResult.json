@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "NavigationBar": "../../components/NavigationBar/NavigationBar",
+    "BackgroundImage": "../../components/BackgroundImage/BackgroundImage"
+  },
   "navigationBarTitleText": "查询结果"
 }

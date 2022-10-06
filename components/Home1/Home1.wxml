@@ -1,0 +1,12 @@
+<!-- 主页一模块 -->
+<view class="Home1-container">
+  <!-- logo -->
+  <image class="logo" src="../../image/logo.png"></image>
+  <!-- VTMER -->
+  <image class="VTMER" src="../../image/VTMER.png"></image>
+  <!-- 维生素 -->
+  <image class="middleName" src="../../image/middleName.png"></image>
+  <image class="welcome" src="../../image/welcome.png"></image>
+
+
+</view>

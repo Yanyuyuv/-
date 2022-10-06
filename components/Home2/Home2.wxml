@@ -1,0 +1,53 @@
+<!-- 主页二模块 -->
+<view class="Home2-container">
+  <!-- 主页2内部的介绍轮播图 -->
+  <view class="h2-swiper-container">
+    <swiper class="h2-swiper" catchtouchstart='h2touchStart' catchtouchend="h2touchEnd" duration="800" current="{{swiperCurrent}}" bindchange="bc">
+      <swiper-item catchtouchmove='catchTouchMove'>
+        <Inc>
+          <!-- 使用Introduce组件插槽 -->
+          <!-- 上方名称 -->
+          <view slot="top-name">运营组</view>
+          <!-- 中间介绍内容 -->
+          <view slot="middle-infomation" style="white-space:pre-wrap;">我们的身影出现于产品策划，产品研发和产品维护等每一个流程，伴随产品一起发展。
+运营组要做的事可能但不止于产品的策划、测试、优化方案、推广方案的策划、用户的沟通等等。
+总结的来说就是：运营的执行者，产品的设计者、体验师和维护者。</view>
+        </Inc>
+      </swiper-item>
+
+      <swiper-item catchtouchmove='catchTouchMove'>
+        <Inc>
+          <!-- 使用Introduce组件插槽 -->
+          <!-- 上方名称 -->
+          <view slot="top-name">设计组</view>
+          <!-- 中间介绍内容 -->
+          <view slot="middle-infomation" style="white-space:pre-wrap;">我们以Ps、Ai等设计软件为画笔，画出内心构想的设计蓝图，属于夜晚较为活泼的物种。
+我们爱设计，爱生活，爱天马行空的想象。熬了无数的夜晚就是希望自己的作品能打动观看者的心。
+爱，便义无反顾。</view>
+        </Inc>
+      </swiper-item>
+      <swiper-item catchtouchmove='catchTouchMove'>
+        <Inc>
+          <!-- 使用Introduce组件插槽 -->
+          <!-- 上方名称 -->
+          <view slot="top-name">后台组</view>
+          <!-- 中间介绍内容 -->
+          <view slot="middle-infomation" style="white-space:pre-wrap;">PHP是世界上最好的语言，我们使用Linux系统做开发，自主搭建开发环境，致力于构建Web后台API，git，Laravel,Composer组合使用，SQL，NoSQL灵活应用，时刻掌握第一手数据。
+(ps:给前端做苦力)</view>
+        </Inc>
+      </swiper-item>
+      <swiper-item catchtouchmove='catchTouchMove'>
+        <Inc>
+          <!-- 使用Introduce组件插槽 -->
+          <!-- 上方名称 -->
+          <view slot="top-name">前端组</view>
+          <!-- 中间介绍内容 -->
+          <view slot="middle-infomation" style="white-space:pre-wrap;">通过html，css，javascript以及衍生出来的各种（jQuery/bootstrap/animate）、框架（AngularJS/vue.js/React.js）、解决方案来实现互联网产品的用户界面交互。致力于为用户呈现更优美的页面，更流畅的交互。
+.....还有，在前台给UI和后台端茶递水。</view>
+        </Inc>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 查询报名按钮组件 -->
+  <InqRegBtn></InqRegBtn>
+</view>

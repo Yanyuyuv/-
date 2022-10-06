@@ -8,9 +8,6 @@ export default (url,data={},method='GET')=> {
             url:config.host+url,
             data,
             method,
-            header:{
-              cookie:wx.getStorageSync('cookies')?wx.getStorageSync('cookies').toString():''
-            },
             success:(res)=>{
             //   console.log('成功:',res);
               resolve(res.data)

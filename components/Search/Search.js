@@ -66,27 +66,28 @@ Component({
       }
 
       // 向服务器发送请求，查看报名状态
-      let result = await request('/getForm/1',)
+      let uid = this.data.studentNumber;
+      let result = await request('/getProgress/`${uid}`')
       console.log(result);
       if (result.code==200) {
-        if (!result.status) {
+        if (!result.state) {
           wx.showToast({
             title: '您未报名',
             icon: 'none'
           })
         }else{
           // 报名成功的跳转到流程页
-          wx.navigateTo({
-            url: '/pages/SearchResult/SearchResult',
-          })
+          // wx.navigateTo({
+          //   url: '/pages/SearchResult/SearchResult',
+          // })
         }
       }
       
       //把输入框的值传到（或者保存到本地
       //跳转查询页面
-      // wx.navigateTo({
-      //   url: '/pages/SearchResult/SearchResult',
-      // })
+      wx.navigateTo({
+        url: '/pages/SearchResult/SearchResult',
+      })
     }
   },
   lifetimes: {

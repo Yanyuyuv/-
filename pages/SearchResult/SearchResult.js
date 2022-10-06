@@ -90,8 +90,9 @@ Page({
   // 向服务器发送请求的函数
   async requestStatus(){
     let result=await request('/getProgress/1')
+    console.log(result)
     this.setData({
-      status:result.progressStatus
+      status:result.state
     })
     this.statusAnimation(this.data.status);
   }

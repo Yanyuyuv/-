@@ -67,7 +67,7 @@ Component({
 
       // 向服务器发送请求，查看报名状态
       let uid = this.data.studentNumber;
-      let result = await request('/getProgress/`${uid}`')
+      let result = await request(`/getProgress/${uid}`)
       console.log(result);
       if (result.code==200) {
         if (!result.state) {
@@ -77,10 +77,15 @@ Component({
           })
         }else{
           // 报名成功的跳转到流程页
-          // wx.navigateTo({
-          //   url: '/pages/SearchResult/SearchResult',
-          // })
+          wx.navigateTo({
+            url: '/pages/SearchResult/SearchResult',
+          })
         }
+      }else{
+        wx.showToast({
+          title: '网络异常',
+          icon: 'none'
+        })
       }
       
       //把输入框的值传到（或者保存到本地

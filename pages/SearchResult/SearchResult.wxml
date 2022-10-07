@@ -1,7 +1,6 @@
 <!--pages/SearchResult/SearchResult.wxml
-<view class="block-line" style="transform:{{lineActive>0?moveY:'transform: translateY(0);'}}">
-        
-    </view>
+{{fail==1&&status==5?'fail':''}}
+{{fail==1&&status==5?failMsg:rightMsg}}
 -->
 <view class="SearchResult-container">
   <!-- 背景 -->
@@ -17,28 +16,29 @@
     <view class="process-container">
       <view class="each-container">
         <text class="left">考核结果</text>
-
-        <text class="right">审核中</text>
+        <!-- wx:if控制 -->
+        <text class="right" wx:if="{{status<5?true:false}}">{{rightMsg}}</text>
+        <text class="right {{fail==1&&status==5?'fail':''}}" wx:if="{{status<5?false:true}}" data-Rstate="5" >{{fail==1&&status==5?failMsg:passMsg}}</text>
       </view>
       <view class="each-container">
         <text class="left">二轮考核</text>
-
-        <text class="right">审核中</text>
+        <text class="right" wx:if="{{status<4?true:false}}">{{rightMsg}}</text>
+        <text class="right {{fail==1&&status==4?'fail':''}}" wx:if="{{status<4?false:true}}" data-Rstate="4" >{{fail==1&&status==4?failMsg:passMsg}}</text>
       </view>
       <view class="each-container">
         <text class="left">一轮考核</text>
-
-        <text class="right">审核中</text>
+        <text class="right" wx:if="{{status<3?true:false}}">{{rightMsg}}</text>
+        <text class="right {{fail==1&&status==3?'fail':''}}" wx:if="{{status<3?false:true}}" data-Rstate="3" >{{fail==1&&status==3?failMsg:passMsg}}</text>
       </view>
       <view class="each-container">
         <text class="left">面试</text>
-
-        <text class="right">审核中</text>
+        <text class="right" wx:if="{{status<2?true:false}}">{{rightMsg}}</text>
+        <text class="right {{fail==1&&status==2?'fail':''}}" wx:if="{{status<2?false:true}}" data-Rstate="2" >{{fail==1&&status==2?failMsg:passMsg}}</text>
       </view>
       <view class="each-container">
         <text class="left">报名</text>
-
-        <text class="right">审核中</text>
+        <text class="right" wx:if="{{status<1?true:false}}">{{rightMsg}}</text>
+        <text class="right {{fail==1&&status==1?'fail':''}}" wx:if="{{status<1?false:true}}" data-Rstate="1" >{{fail==1&&status==1?failMsg:passMsg}}</text>
       </view>
 
     </view>

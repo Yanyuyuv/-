@@ -89,3 +89,7 @@ page {
   transition: 1.5s transform ease;
 
 }
+
+.process-container .each-container .fail{
+  color: red;
+}

@@ -7,22 +7,26 @@ Page({
    */
   data: {
     //0未报名，1报名成功，2面试成功，3.....
-    status:0,
-    lineActive:-1,
-    moveY:'translateY(0)'
+    status: 0,
+    lineActive: -1,
+    moveY: 'translateY(0)',
+    rightMsg:'审核中',
+    failMsg:'未通过',
+    passMsg:'通过',
+    fail:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    setTimeout(()=>{ 
+    setTimeout(() => {
       this.requestStatus()
-      
-      
-    },1000)
-   
-    
+
+
+    }, 500)
+
+
   },
 
   /**
@@ -75,25 +79,34 @@ Page({
   },
 
   // 加载动画
-  statusAnimation(status){
-    if (status==0) {
+  statusAnimation(status) {
+    if (status == 0) {
       return
     }
-    let movePercent=-15-(status-1)*25;
+    let movePercent = -15 - (status - 1) * 25;
     this.setData({
-      lineActive:1,
-      moveY:'translateY'+`(${movePercent}%)`
+      lineActive: 1,
+      moveY: 'translateY' + `(${movePercent}%)`
     })
     console.log(this.data.moveY);
   },
 
   // 向服务器发送请求的函数
-  async requestStatus(){
-    let result=await request('/getProgress/1')
-    console.log(result)
-    this.setData({
-      status:result.state
-    })
-    this.statusAnimation(this.data.status);
+  async requestStatus() {
+    let result = await request('/getProgress/1')
+    if (result.code == 200) {
+      console.log(result)
+      this.setData({
+        status: result.state,
+        fail: result.fail
+      })
+      this.statusAnimation(this.data.status);
+    }else{
+      wx.showToast({
+        title: '网络异常',
+        icon: 'none'
+      })
+    }
+
   }
 })

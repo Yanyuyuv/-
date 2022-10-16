@@ -7,6 +7,7 @@ Page({
    */
   data: {
     //0未报名，1报名成功，2面试成功，3.....
+    stuId:0,
     status: 0,
     lineActive: -1,
     moveY: 'translateY(0)',
@@ -20,6 +21,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      stuId:options.stuId
+    })
     setTimeout(() => {
       this.requestStatus()
 
@@ -93,12 +97,13 @@ Page({
 
   // 向服务器发送请求的函数
   async requestStatus() {
-    let result = await request('/getProgress/1')
+    let result = await request(`/getProgress/${this.data.stuId}`)
+    console.log(result)
     if (result.code == 200) {
-      console.log(result)
+      
       this.setData({
-        status: result.state,
-        fail: result.fail
+        status: result.data.change.status,
+        fail: result.data.change.fail
       })
       this.statusAnimation(this.data.status);
     }else{

@@ -106,6 +106,11 @@ Page({
       return
     }
 
+    for(k in studentNumber){
+      console.log(666);
+      console.log(k);
+    }
+
     let phoneReg=/^1(3|4|5|6|7|8|9)\d{9}$/;
     if (!phoneReg.test(phone)) {
       wx.showToast({

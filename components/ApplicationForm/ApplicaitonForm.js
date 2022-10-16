@@ -66,6 +66,15 @@ Component({
         return
       }
 
+      let stuIdReg=/^3\d{9}$/;
+      if (!stuIdReg.test(studentNumber)) {
+        wx.showToast({
+          title: '学号格式错误',
+          icon: 'none'
+        })
+        return;
+      }
+
       let phoneReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
       if (!phoneReg.test(phone)) {
         wx.showToast({
@@ -82,9 +91,28 @@ Component({
     // 发送请求的函数
     async sendRequest(){
       let {direction,zhuanYe,name,studentNumber,phone,selfComment} = this.data;
-      let userInfo={direction,zhuanYe,name,studentNumber,phone,selfComment}
+
+
+      let userInfo={}
+      userInfo.username=this.data.name;
+      userInfo.phone=this.data.phone;
+      userInfo.studId=this.data.studentNumber;
+      userInfo.professional=this.data.zhuanYe;
+      userInfo.interestGroups=this.data.direction;
+      userInfo.selfIntroduction=this.data.selfComment
+      console.log(userInfo);
+      
       let result= await request('/reg',userInfo,'POST')
-      console.log(result);
+
+      // let result= await request('/reg',userInfo,'POST')
+
+      if (result.code==200) {
+        wx.showToast({
+          title: '报名成功',
+          
+        })
+      }
+      
     }
   }
 })

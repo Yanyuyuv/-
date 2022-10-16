@@ -7,6 +7,9 @@ export default (url,data={},method='GET')=> {
         wx.request({
             url:config.host+url,
             data,
+            header:{
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
             method,
             success:(res)=>{
             //   console.log('成功:',res);

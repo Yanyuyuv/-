@@ -70,7 +70,7 @@ Component({
       let result = await request(`/getProgress/${uid}`)
       console.log(result);
       if (result.code==200) {
-        if (!result.state) {
+        if (!result.data.change.status) {
           wx.showToast({
             title: '您未报名',
             icon: 'none'
@@ -78,9 +78,14 @@ Component({
         }else{
           // 报名成功的跳转到流程页
           wx.navigateTo({
-            url: '/pages/SearchResult/SearchResult',
+            url: `/pages/SearchResult/SearchResult?stuId=${studentNumber}`,
           })
         }
+      }else if(result.code==1006){
+        wx.showToast({
+          title: '未报名',
+          icon: 'none'
+        })
       }else{
         wx.showToast({
           title: '网络异常',
@@ -90,9 +95,9 @@ Component({
       
       //把输入框的值传到（或者保存到本地
       //跳转查询页面
-      wx.navigateTo({
-        url: '/pages/SearchResult/SearchResult',
-      })
+      // wx.navigateTo({
+      //   url: `/pages/SearchResult/SearchResult?${}`,
+      // })
     }
   },
   lifetimes: {

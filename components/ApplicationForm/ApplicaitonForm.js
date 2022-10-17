@@ -105,11 +105,15 @@ Component({
       let result= await request('/reg',userInfo,'POST')
 
       // let result= await request('/reg',userInfo,'POST')
-
+      console.log(result);
       if (result.code==200) {
         wx.showToast({
           title: '报名成功',
-          
+        })
+      }else if (result.code==1006) {
+        wx.showToast({
+          title: '您已经报名过',
+          icon:'none'
         })
       }
       

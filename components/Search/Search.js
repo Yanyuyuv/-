@@ -15,7 +15,6 @@ Component({
   data: {
     easeShow: 0,
     easeCloseTimer: null,
-    name:'',
     studentNumber:0
   },
 
@@ -55,11 +54,11 @@ Component({
     // 查询按钮
     async goSearch() {
       // 先判断姓名学号不为空
-      let {name,studentNumber} = this.data;
+      let {studentNumber} = this.data;
       // 首先保证全部填写
-      if (!name || !studentNumber) {
+      if (!studentNumber) {
         wx.showToast({
-          title: '姓名或者学号没填哟',
+          title: '学号没填哟',
           icon: 'none'
         })
         return
@@ -68,7 +67,7 @@ Component({
       // 向服务器发送请求，查看报名状态
       let uid = this.data.studentNumber;
       let result = await request(`/getProgress/${uid}`)
-      console.log(result);
+      // console.log(result);
       if (result.code==200) {
         if (!result.data.change.status) {
           wx.showToast({
@@ -83,7 +82,7 @@ Component({
         }
       }else if(result.code==1006){
         wx.showToast({
-          title: '未报名',
+          title: '无报名信息',
           icon: 'none'
         })
       }else{

@@ -13,9 +13,6 @@
     </view>
 
     <view class="studentInfo">
-      <view class="student-name">
-        <text>姓名:</text><input type="text" placeholder="请输入姓名" bindinput="handleInput" data-type="name"></input>
-      </view>
       <view class="student-number">
         <text>学号:</text><input type="text" placeholder="请输入学号" bindinput="handleInput" data-type="studentNumber"></input>
       </view>

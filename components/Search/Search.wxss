@@ -54,7 +54,9 @@
 
 /* 报名查询标题 */
 .search-title {
+  /* background-color: red; */
   margin: 0 auto;
+  margin-top: 50rpx;
   width: 240rpx;
   text-align: center;
   font-size: 40rpx;
@@ -65,7 +67,10 @@
   width: 540rpx;
   height: 280rpx;
   /* background-color: beige; */
-  margin: 50rpx auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0 auto;
 }
 
 .studentInfo view {

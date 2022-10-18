@@ -92,13 +92,13 @@ Page({
       lineActive: 1,
       moveY: 'translateY' + `(${movePercent}%)`
     })
-    console.log(this.data.moveY);
+    // console.log(this.data.moveY);
   },
 
   // 向服务器发送请求的函数
   async requestStatus() {
     let result = await request(`/getProgress/${this.data.stuId}`)
-    console.log(result)
+    // console.log(result)
     if (result.code == 200) {
       
       this.setData({

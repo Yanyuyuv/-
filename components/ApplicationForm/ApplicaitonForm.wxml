@@ -1,4 +1,4 @@
-<view class="ApplicatonForm-container">
+<view class="ApplicatonForm-container" style="transform: {{containerXY}};transition:{{containerXYtime}};">
   <view class="wrapper">
     <view class="form-container">
       <view class="logo-container">
@@ -15,29 +15,29 @@
       <view class="input-container">
         <view class="input-item">
           <text>方向:</text>
-          <input type="text" bindinput="handleInput" data-type="direction" placeholder="前端/后台/UI/运营" placeholder-style="font-size:1rem;"></input>
+          <input type="text" bindinput="handleInput" data-type="direction" placeholder="前端/后台/UI/运营" placeholder-style="font-size:1rem;" value='{{direction}}'></input>
 
         </view>
         <view class="input-item">
           <text>专业:</text>
-          <input type="text" bindinput="handleInput" data-type="zhuanYe"></input>
+          <input type="text" bindinput="handleInput" data-type="zhuanYe" value='{{zhuanYe}}'></input>
         </view>
         <view class="input-item">
           <text>姓名:</text>
-          <input type="text" bindinput="handleInput" data-type="name"></input>
+          <input type="text" bindinput="handleInput" data-type="name" value='{{name}}'></input>
         </view>
 
         <view class="input-item">
           <text>学号:</text>
-          <input type="number" bindinput="handleInput" data-type="studentNumber"></input>
+          <input type="number" bindinput="handleInput" data-type="studentNumber" value='{{studentNumber}}'></input>
         </view>
         <view class="input-item">
           <text>手机:</text>
-          <input type="text" bindinput="handleInput" data-type="phone"></input>
+          <input type="text" bindinput="handleInput" data-type="phone" value='{{phone}}'></input>
         </view>
         <view class="self-comment">
           <view>自我评价:(最多输入70个字符哟~)</view>
-          <textarea maxlength="70" bindinput="handleInput" data-type="selfComment"></textarea>
+          <textarea maxlength="70" bindinput="handleInput" data-type="selfComment" value='{{selfComment}}'></textarea>
         </view>
 
       </view>

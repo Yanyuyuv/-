@@ -1,12 +1,12 @@
 <!-- 主页一模块 -->
 <view class="Home1-container">
   <!-- logo -->
-  <image class="logo" src="../../image/logo.png"></image>
+  <image class="logo" src="https://vtmer.cn/logo.png"></image>
   <!-- VTMER -->
-  <image class="VTMER" src="../../image/VTMER.png"></image>
+  <image class="VTMER" src="https://vtmer.cn/VTMER.png"></image>
   <!-- 维生素 -->
-  <image class="middleName" src="../../image/middleName.png"></image>
-  <image class="welcome" src="../../image/welcome.png"></image>
+  <image class="middleName" src="https://vtmer.cn/middleName.png"></image>
+  <image class="welcome" src="https://vtmer.cn/welcome.png"></image>
 
 
 </view>

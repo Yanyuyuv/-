@@ -2,7 +2,7 @@
   <view class="wrapper">
     <view class="form-container">
       <view class="logo-container">
-        <image src="../../static/images/logo.png" mode="widthFix"></image>
+        <image src="https://vtmer.cn/logo.png" mode="widthFix"></image>
       </view>
       <!--消除浮动-->
       <view class="clearfix"></view>

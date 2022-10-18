@@ -48,7 +48,7 @@ Component({
         phone,
         selfComment
       } = this.data;
-      console.log(direction.toUpperCase().indexOf('UI'));
+      // console.log(direction.toUpperCase().indexOf('UI'));
       // 首先保证全部填写
       if (!direction || !zhuanYe || !name || !studentNumber || !phone || !selfComment) {
         wx.showToast({

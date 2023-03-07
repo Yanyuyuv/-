@@ -8,6 +8,7 @@ Page({
   data: {
     //0未报名，1报名成功，2面试成功，3.....
     stuId:0,
+    direction:'',
     status: 0,
     lineActive: -1,
     moveY: 'translateY(0)',
@@ -21,8 +22,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  
     this.setData({
-      stuId:options.stuId
+      stuId:options.stuId,
+      direction:options.direction
     })
     setTimeout(() => {
       this.requestStatus()

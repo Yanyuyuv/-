@@ -1,12 +1,27 @@
 <!-- 主页一模块 -->
 <view class="Home1-container">
+ 
+   <!-- loading遮罩 -->
+  <view class="box" wx:if="{{loadingDisplay}}" style="opacity: {{loadingOpa}};">
+    <view class="circle-line2">
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+    </view>
+  </view>
+
   <!-- logo -->
-  <image class="logo" src="https://vtmer.cn/logo.png"></image>
+  <image class="logo" src="https://recruit.moxiaoxiao.net/logo.png" binderror='IMGerror' bindload="IMGOK"></image>
   <!-- VTMER -->
-  <image class="VTMER" src="https://vtmer.cn/VTMER.png"></image>
+  <image class="VTMER" src="https://recruit.moxiaoxiao.net/VTMER.png" binderror='IMGerror' bindload="IMGOK"></image>
   <!-- 维生素 -->
-  <image class="middleName" src="https://vtmer.cn/middleName.png"></image>
-  <image class="welcome" src="https://vtmer.cn/welcome.png"></image>
+  <image class="middleName" src="https://recruit.moxiaoxiao.net/middleName.png" binderror='IMGerror' bindload="IMGOK"></image>
+  <image class="welcome" src="https://recruit.moxiaoxiao.net/welcome.png" binderror='IMGerror' bindload="IMGOK"></image>
 
 
 </view>

@@ -32,8 +32,8 @@
           <!-- 上方名称 -->
           <view slot="top-name">后台组</view>
           <!-- 中间介绍内容 -->
-          <view slot="middle-infomation" style="white-space:pre-wrap;">PHP是世界上最好的语言，我们使用Linux系统做开发，自主搭建开发环境，致力于构建Web后台API，git，Laravel,Composer组合使用，SQL，NoSQL灵活应用，时刻掌握第一手数据。
-(ps:给前端做苦力)</view>
+          <view slot="middle-infomation" style="white-space:pre-wrap;">后台是一个与信息与数据息息相关的方向，主要负责处理各种各样的数据，实现业务逻辑，与数据库、大数据平台进行数据交互。
+VTMER工作室后台组以校内项目为主、企业和大创项目为辅，构建学研结合的高效学习模式。</view>
         </Inc>
       </swiper-item>
       <swiper-item catchtouchmove='catchTouchMove'>

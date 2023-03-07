@@ -95,7 +95,7 @@ Component({
         return
       }
 
-      if (direction.indexOf('前端') == -1 && direction.indexOf('后端') == -1 && direction.indexOf('后台') == -1 && direction.toUpperCase().indexOf('UI') == -1 && direction.indexOf('运营') == -1) {
+      if (direction!='前端' && direction!='后台' && direction!='设计' && direction!='运营') {
         wx.showToast({
           title: '好像没有这个方向哟',
           icon: 'none'
@@ -171,6 +171,7 @@ Component({
         wx.showToast({
           title: '报名成功',
           icon: 'success',
+          duration:2000,
           success() {
             //触发报名成功动画(移动表单 清除表单 移回表单)
             //表单提交动画
@@ -182,6 +183,7 @@ Component({
       } else if (result.code == 1006) {
         wx.showToast({
           title: '您已经报名过',
+          duration:2000,
           icon: 'error'
         })
       }

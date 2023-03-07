@@ -4,7 +4,7 @@
   <view class="search-container">
     <view class="iconfont icon-cha" bindtap="searchClose">×</view>
     <view class="logo-container">
-      <image src="https://vtmer.cn/logo.png" mode="widthFix"></image>
+      <image src="https://recruit.moxiaoxiao.net/logo.png" binderror='IMGerror' mode="widthFix" 	></image>
     </view>
     <view class="clearfix"></view>
 

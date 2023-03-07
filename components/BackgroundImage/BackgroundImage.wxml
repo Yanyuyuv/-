@@ -1,4 +1,4 @@
 <!-- 背景图片通用组件 -->
 <view class="BackgroundImage-container">
-  <image src="https://vtmer.cn/backgroundImage.png" style="width:100%;height:100%;"></image>
+  <image src="https://recruit.moxiaoxiao.net/backgroundImage.png" binderror='IMGerror' style="width:100%;height:100%;"></image>
 </view>

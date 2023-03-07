@@ -15,17 +15,6 @@ page{
   width: 100%;
   flex:1;/*让轮播图部分铺满下面的部分*/
 
-  animation-name: ease-in;
-  animation-duration:2s;
+
 }  
 
-/* 缓入动画 */
-@keyframes ease-in{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-
-}

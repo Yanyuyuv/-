@@ -2,7 +2,7 @@
   <view class="wrapper">
     <view class="form-container">
       <view class="logo-container">
-        <image src="https://vtmer.cn/logo.png" mode="widthFix"></image>
+        <image src="https://recruit.moxiaoxiao.net/logo.png" mode="widthFix"></image>
       </view>
       <!--消除浮动-->
       <view class="clearfix"></view>
@@ -15,7 +15,7 @@
       <view class="input-container">
         <view class="input-item">
           <text>方向:</text>
-          <input type="text" bindinput="handleInput" data-type="direction" placeholder="前端/后台/UI/运营" placeholder-style="font-size:1rem;" value='{{direction}}'></input>
+          <input type="text" bindinput="handleInput" data-type="direction" placeholder="前端/后台/设计/运营" placeholder-style="font-size:1rem;" value='{{direction}}'></input>
 
         </view>
         <view class="input-item">

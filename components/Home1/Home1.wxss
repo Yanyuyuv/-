@@ -5,6 +5,105 @@
   width: 100%;
 }
 
+/* loading */
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(86,126,188, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transition: 2s;
+}
+
+/* 第六个 */
+.circle-line2 {
+  position: relative;
+  transform: scale(1.4);
+}
+
+.circle-line2 text {
+  display: block;
+  width: 40px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 40px);
+  transform-origin: center right;
+  animation: circle2 1.5s linear infinite;
+}
+
+.circle-line2 text::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: rgb(138, 182, 240);
+}
+
+.circle-line2 text:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: 0.2s;
+}
+
+.circle-line2 text:nth-child(2) {
+  transform: rotate(45deg);
+  animation-delay: 0.4s;
+}
+
+.circle-line2 text:nth-child(3) {
+  transform: rotate(90deg);
+  animation-delay: 0.6s;
+}
+
+.circle-line2 text:nth-child(4) {
+  transform: rotate(135deg);
+  animation-delay: 0.8s;
+}
+
+.circle-line2 text:nth-child(5) {
+  transform: rotate(180deg);
+  animation-delay: 1s;
+}
+
+.circle-line2 text:nth-child(6) {
+  transform: rotate(225deg);
+  animation-delay: 1.2s;
+}
+
+.circle-line2 text:nth-child(7) {
+  transform: rotate(270deg);
+  animation-delay: 1.4s;
+}
+
+.circle-line2 text:nth-child(8) {
+  transform: rotate(315deg);
+  animation-delay: 1.6s;
+}
+
+@keyframes circle2 {
+  0% {
+    opacity: 0.15;
+    transform: rotate(-360deg);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: rotate(360deg);
+  }
+}
+
 .logo {
   position: absolute;
   top: 30rpx;
@@ -25,8 +124,6 @@
 
   width: 14vh;
   height: 46vh;
-  /* 缓缓缩放动态 */
-  animation: h1dynamic-z 10s ease-in-out infinite alternate;
 }
 
 .middleName {
@@ -41,8 +138,6 @@
 
   width: 24vh;
   height: 8vh;
-  /* 缓缓平面移动动态 */
-  animation: h1dynamic-xy 10s ease-in-out infinite alternate;
 }
 
 .welcome {
@@ -58,8 +153,6 @@
 
   width: 24vh;
   height: 2.6vh;
-  /* 缓缓平面移动动态 */
-  animation: h1dynamic-xy 10s ease-in-out infinite alternate;
 }
 
 /* h1缓入动画 */
@@ -70,37 +163,5 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-/* h1图片平面动态动画 */
-@keyframes h1dynamic-xy {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-1.8px, -1.8px);
-
-  }
-
-  100% {
-    transform: translate(1.8px, 1.8px);
-  }
-}
-
-/* h1图片缩放动态动画 */
-@keyframes h1dynamic-z {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  50% {
-    transform: scale(1.02, 1.02);
-
-  }
-
-  100% {
-    transform: scale(0.98, 0.98);
   }
 }

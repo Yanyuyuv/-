@@ -53,7 +53,7 @@ Component({
             swiperKey: 1
             // h2change: 1
           })
-        }, 800)
+        }, 600)
 
       })
 

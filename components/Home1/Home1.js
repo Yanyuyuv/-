@@ -11,6 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    show:false,
     IMGOKNum: 0,
     loadingOpa: 1,
     loadingDisplay:true
@@ -44,6 +45,13 @@ Component({
       wx.showToast({
         title: '网络异常',
         icon: 'error'
+      })
+    }
+  },
+  lifetimes:{
+    created(){
+      this.setData({
+        show:true
       })
     }
   }

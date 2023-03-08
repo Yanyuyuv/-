@@ -15,7 +15,14 @@
       <view class="input-container">
         <view class="input-item">
           <text>方向:</text>
-          <input type="text" bindinput="handleInput" data-type="direction" placeholder="前端/后台/设计/运营" placeholder-style="font-size:1rem;" value='{{direction}}'></input>
+          <!-- <input type="text" bindinput="handleInput" data-type="direction" placeholder="前端/后台/设计/运营" placeholder-style="font-size:1rem;" value='{{direction}}'></input> -->
+          <van-radio-group value="{{ direction }}" bind:change="onChange" direction="horizontal"
+          style="width: 100%;display: flex;justify-content: space-around;">
+            <van-radio name="前端">前端</van-radio>
+            <van-radio name="后台">后台</van-radio>
+            <van-radio name="设计">设计</van-radio>
+            <van-radio name="运营">运营</van-radio>
+          </van-radio-group>
 
         </view>
         <view class="input-item">
@@ -40,12 +47,13 @@
           <textarea maxlength="70" bindinput="handleInput" data-type="selfComment" value='{{selfComment}}'></textarea>
         </view>
 
-      </view>
 
       <!--事件为前端验证-->
       <button type="submit" class="submitbtn" bindtap="webVerify">
         立即提交
       </button>
+      </view>
+
     </view>
   </view>
 </view>

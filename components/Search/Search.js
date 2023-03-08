@@ -13,6 +13,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    value: '',
     easeShow: 0,
     easeCloseTimer: null,
     studentNumber: 0
@@ -84,7 +85,7 @@ Component({
       // 向服务器发送请求，查看报名状态
       let uid = this.data.studentNumber;
       let result = await request(`/getProgress/${uid}`)
-      console.log(result);
+      // console.log(result);
       if (result.code == 200) {
         if (!result.data.change.status) {
           wx.showToast({

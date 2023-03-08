@@ -154,14 +154,3 @@
   width: 24vh;
   height: 2.6vh;
 }
-
-/* h1缓入动画 */
-@keyframes h1ease-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}

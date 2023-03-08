@@ -18,10 +18,12 @@
     top:10%;
     left: 10%; */
   width: 600rpx;
-  max-height: 80vh;
-  /*微调位置*/
+  /* height: 80vh; */
   background-color: rgba(255, 255, 255, .6);
   border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
 }
 
 .logo-container {
@@ -38,7 +40,8 @@
   color: #808080;
   padding-left: 5%;
   padding-bottom: 2%;
-  box-shadow: 0rpx 1rpx #808080
+  box-shadow: 0rpx 1rpx #808080;
+  flex: 1;
 }
 
 .input-container {
@@ -47,16 +50,21 @@
   margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
+}
+.input-container>view{
+  margin: 15rpx 0;
 }
 
 .input-container .input-item {
-  height: 60rpx;
-  margin: 1.5vh 0;/*每一行的间隔*/
+  height: 100rpx;
+  /* margin: 1.5vh 0;/*每一行的间隔 */
   white-space: nowrap;
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  flex: 1;
 
 }
 
@@ -81,7 +89,7 @@
 }
 .self-comment view {
   font-size: 1rem;
-  margin: 20rpx 20rpx 10rpx 0rpx;
+  /* margin: 20rpx 20rpx 10rpx 0rpx; */
   white-space: nowrap;
 }
 
@@ -102,4 +110,8 @@
   letter-spacing: 2px;
   background-color: #567ebc;
   color: #fff;
+}
+van-radio{
+  margin: 2px auto;
+  width: 50%;
 }

@@ -12,6 +12,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    postTime:-1,//提交按钮定时器
     timeId: -1, //用来弄输入框定时器
     containerXY: 'translate(0px,0px)', //表单位置
     containerXYtime: '2s', //表单动画过渡时间
@@ -29,6 +30,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    onChange(event) {
+      this.setData({
+        direction: event.detail,
+      });
+    },
     //表单输入事件
     handleInput(e) {
       //0.3秒后将表单输入内容转移到data中
@@ -87,6 +93,7 @@ Component({
       } = this.data;
       // console.log(direction.toUpperCase().indexOf('UI'));
       // 首先保证全部填写
+      // console.log(this.direction)
       if (!direction || !zhuanYe || !name || !studentNumber || !phone || !selfComment) {
         wx.showToast({
           title: '好像有表格没填完哟',
@@ -138,6 +145,15 @@ Component({
 
 
 
+    },
+
+    webVerifyTimer(){
+      //0.3秒后再执行提交功能 搭配表单的0.3秒定时器
+      clearTimeout(this.postTime)
+      this.postTime = setTimeout(() => {
+        this.webVerify()
+      }, 300)
+      
     },
 
     // 发送请求的函数

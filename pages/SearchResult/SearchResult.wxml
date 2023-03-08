@@ -12,15 +12,13 @@
   </view>
 
   <view class="wrapper">
-    <view class="uid">
-      <view>{{stuId}}</view>
-      <view>{{direction}}组</view>
-    </view>
-
 
     <view class="process-container">
       <view class="each-container">
-        <text class="left">考核结果</text>
+        <view class="left">
+          <van-tag plain type="primary" size="large">考核结果</van-tag>
+        </view>
+
         <!-- wx:if控制 -->
         <view class="right">
           <!-- 审核图标 -->
@@ -30,15 +28,19 @@
           <!-- 淘汰图标 -->
           <icon size="1.2rem" wx:if="{{fail==1&&status==5}}" type="cancel"></icon>
           <view>
-            <text wx:if="{{status<5?true:false}}">{{rightMsg}}</text>
-            <text class="rightTxt {{fail==1&&status==5?'fail':''}}" wx:if="{{status<5?false:true}}" data-Rstate="5">{{fail==1&&status==5?failMsg:passMsg}}</text>
+            <van-tag type="primary" size="large" wx:if="{{status<5?true:false}}">{{rightMsg}}</van-tag>
+            <!-- 通过或失败 -->
+            <van-tag type="{{fail==1&&status==5?'warning':'success'}}" size="large" wx:if="{{status<5?false:true}}" data-Rstate="5">{{fail==1&&status==5?failMsg:passMsg}}</van-tag>
           </view>
 
         </view>
 
       </view>
       <view class="each-container">
-        <text class="left">二轮考核</text>
+        <view class="left">
+          <van-tag plain type="primary" size="large">二轮考核</van-tag>
+        </view>
+
 
         <view class="right">
           <!-- 审核图标 -->
@@ -48,15 +50,19 @@
           <!-- 淘汰图标 -->
           <icon size="1.2rem" wx:if="{{fail==1&&status==4}}" type="cancel"></icon>
           <view>
-            <text wx:if="{{status<4?true:false}}">{{rightMsg}}</text>
-            <text class="rightTxt {{fail==1&&status==4?'fail':''}}" wx:if="{{status<4?false:true}}" data-Rstate="4">{{fail==1&&status==4?failMsg:passMsg}}</text>
+            <!-- 审核中 -->
+            <van-tag type="primary" size="large" wx:if="{{status<4?true:false}}">{{rightMsg}}</van-tag>
+            <!-- 通过或失败 -->
+            <van-tag type="{{fail==1&&status==4?'warning':'success'}}" size="large" wx:if="{{status<4?false:true}}" data-Rstate="4">{{fail==1&&status==4?failMsg:passMsg}}</van-tag>
           </view>
         </view>
 
 
       </view>
       <view class="each-container">
-        <text class="left">一轮考核</text>
+        <view class="left">
+          <van-tag plain type="primary" size="large">一轮考核</van-tag>
+        </view>
 
         <view class="right">
           <!-- 审核图标 -->
@@ -66,14 +72,18 @@
           <!-- 淘汰图标 -->
           <icon size="1.2rem" wx:if="{{fail==1&&status==3}}" type="cancel"></icon>
           <view>
-            <text wx:if="{{status<3?true:false}}">{{rightMsg}}</text>
-            <text class="rightTxt {{fail==1&&status==3?'fail':''}}" wx:if="{{status<3?false:true}}" data-Rstate="3">{{fail==1&&status==3?failMsg:passMsg}}</text>
+            <!-- 审核中 -->
+            <van-tag type="primary" size="large" wx:if="{{status<3?true:false}}">{{rightMsg}}</van-tag>
+            <!-- 通过或失败 -->
+            <van-tag type="{{fail==1&&status==3?'warning':'success'}}" size="large" wx:if="{{status<3?false:true}}" data-Rstate="3">{{fail==1&&status==3?failMsg:passMsg}}</van-tag>
           </view>
         </view>
 
       </view>
       <view class="each-container">
-        <text class="left">面试</text>
+        <view class="left">
+          <van-tag plain type="primary" size="large">面试</van-tag>
+        </view>
 
         <view class="right">
           <!-- 审核图标 -->
@@ -83,14 +93,19 @@
           <!-- 淘汰图标 -->
           <icon size="1.2rem" wx:if="{{fail==1&&status==2}}" type="cancel"></icon>
           <view>
-            <text wx:if="{{status<2?true:false}}">{{rightMsg}}</text>
-            <text class="rightTxt {{fail==1&&status==2?'fail':''}}" wx:if="{{status<2?false:true}}" data-Rstate="2">{{fail==1&&status==2?failMsg:passMsg}}</text>
+            <!-- 审核中 -->
+            <van-tag type="primary" size="large" wx:if="{{status<2?true:false}}">{{rightMsg}}</van-tag>
+            <!-- 通过或失败 -->
+            <van-tag type="{{fail==1&&status==2?'warning':'success'}}" size="large" wx:if="{{status<2?false:true}}" data-Rstate="2">{{fail==1&&status==2?failMsg:passMsg}}</van-tag>
           </view>
         </view>
 
       </view>
       <view class="each-container">
-        <text class="left">报名</text>
+        <view class="left">
+          <van-tag plain type="primary" size="large">报名</van-tag>
+        </view>
+
 
         <view class="right">
           <!-- 审核图标 -->
@@ -100,8 +115,10 @@
           <!-- 淘汰图标 -->
           <icon size="1.2rem" wx:if="{{fail==1&&status==1}}" type="cancel"></icon>
           <view>
-            <text wx:if="{{status<1?true:false}}">{{rightMsg}}</text>
-            <text class="rightTxt {{fail==1&&status==1?'fail':''}}" wx:if="{{status<1?false:true}}" data-Rstate="1">{{fail==1&&status==1?failMsg:passMsg}}</text>
+            <!-- 审核中 -->
+            <van-tag type="primary" size="large" wx:if="{{status<1?true:false}}">{{rightMsg}}</van-tag>
+            <!-- 通过或失败 -->
+            <van-tag type="{{fail==1&&status==1?'warning':'success'}}" size="large" wx:if="{{status<1?false:true}}" data-Rstate="1">{{fail==1&&status==1?failMsg:passMsg}}</van-tag>
           </view>
         </view>
 
@@ -113,6 +130,36 @@
 
       </view>
     </view>
+
+    <!-- 白色卡片 -->
+    <view class="white-card"></view>
+
+    <!-- 返回按钮 -->
+    <view class="exit-btn">
+      <van-icon name="cross" style="padding: 15px 15px;" bindtap="exitBtn" />
+    </view>
+
+    <!-- 下方按钮 -->
+    <view class="bottom-btn" bindtouchstart="infoBtn" style="animation-name: {{move}};">
+      <van-icon name="arrow-up" style="padding: 5px 5px;" />
+      <view>
+        <text>报名信息</text>
+      </view>
+    </view>
+
+    <!-- 个人信息下方弹窗 -->
+    <van-popup show="{{ show }}" round position="bottom" custom-style="height: 20%" bind:close="onClose" overlay-style="background:rgba(0,0,0,0.4);" custom-style="    background: rgb(231, 238, 255);height:20vh;width:100%;">
+      <view class="uid">
+        <view>
+          <van-icon name="manager-o" />
+          <text> 学号：{{stuId}}</text>
+        </view>
+        <view>
+          <van-icon name="like-o"></van-icon>
+          <text> 方向：{{direction}}组</text>
+        </view>
+      </view>
+    </van-popup>
   </view>
 
 </view>
